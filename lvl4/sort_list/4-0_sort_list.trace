@@ -1,0 +1,47 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+e2r12p19.42.fr
+Darwin 15.6.0 x86_64
+$> date
+Tue Oct 24 00:11:18 CEST 2017
+$> gcc --version
+Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 8.0.0 (clang-800.0.42.1)
+Target: x86_64-apple-darwin15.6.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+$> clang --version
+Apple LLVM version 8.0.0 (clang-800.0.42.1)
+Target: x86_64-apple-darwin15.6.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2017/c-exam-alone-in-the-dark-beginner/practice-exam_20171023/rfulop6
+
+= Git history ==================================================================
+$> git -C /var/folders/3r/tw9qy50x4hz7f7zdd56__b8w0000gq/T/tmpS7L4ZO/user log --pretty='%H - %an, %ad : %s'
+b54203465abcae9b2216305633553ab7e538c96d - rfulop, Tue Oct 24 00:11:11 2017 +0200 : sort_list
+ 
+= Collected files ==========================================
+$> ls -lAR /var/folders/3r/tw9qy50x4hz7f7zdd56__b8w0000gq/T/tmpS7L4ZO/user
+total 8
+-rw-r--r--  1 deepthought  deepthought  239 Oct 24 00:11 __GIT_HISTORY
+drwxr-xr-x  3 deepthought  deepthought  102 Oct 24 00:11 sort_list
+
+/var/folders/3r/tw9qy50x4hz7f7zdd56__b8w0000gq/T/tmpS7L4ZO/user/sort_list:
+total 8
+-rw-r--r--  1 deepthought  deepthought  1239 Oct 24 00:11 sort_list.c
+ 
+= sort_list ====================================================================
+$> clang -Wextra -Wall -Werror sort_list.c main.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./w27b84yoeao8sx6rasbadli2
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+Grade: 1
+
+= Final grade: 1 ===============================================================
