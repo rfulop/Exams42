@@ -6,7 +6,7 @@
 /*   By: exam <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/24 10:02:09 by exam              #+#    #+#             */
-/*   Updated: 2017/10/24 10:41:30 by exam             ###   ########.fr       */
+/*   Updated: 2017/10/26 03:49:53 by rfulop           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,17 +30,8 @@ int find(char *str, char c)
 
 	while (str[i])
 	{
-		if (c == '(' && str[i] == ')')
-		{
-			str[i] = 1;
-			return 1;
-		}
-		else if (c == '{' && str[i] == '}')
-		{
-			str[i] = 1;
-			return 1;
-		}
-		else if (c == '[' && str[i] == ']')
+		if ((c == '(' && str[i] == ')') || (c == '{' && str[i] == '}') ||
+			(c == '[' && str[i] == ']'))
 		{
 			str[i] = 1;
 			return 1;
@@ -97,15 +88,10 @@ int main(int argc, char **argv)
 	{
 		while (i < argc)
 		{
-			if (!(brackets(argv[i])))
+			if (!(brackets(argv[i])) || !check(argv[i]))
 				write(1, "Error\n", 6);
 			else
-			{
-				if (check(argv[i]))
 					write(1, "OK\n", 3);
-				else
-					write(1, "Error\n", 6);
-			}
 			++i;
 		}
 	}
