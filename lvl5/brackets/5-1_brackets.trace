@@ -1,9 +1,9 @@
 = Host-specific information ====================================================
 $> hostname; uname -msr
-e2r10p18.42.fr
+e2r8p3.42.fr
 Darwin 15.6.0 x86_64
 $> date
-Tue Oct 24 10:47:53 CEST 2017
+Thu Oct 26 03:51:22 CEST 2017
 $> gcc --version
 Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
 Apple LLVM version 8.0.0 (clang-800.0.42.1)
@@ -18,63 +18,62 @@ InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault
 
 = User files collection ========================================================
 Collecting user files from Vogsphere
-Repository URL: auto-exam/2017/c-exam-alone-in-the-dark-beginner/exam_20171024/rfulop
+Repository URL: auto-exam/2017/c-exam-alone-in-the-dark-beginner/practice-exam_20171026/rfulop2
 
 = Git history ==================================================================
-$> git -C /var/folders/dm/dqtn846x2wdf4h6jk_rh0mq00000gq/T/tmpZIs5QU/user log --pretty='%H - %an, %ad : %s'
-0e3fff96a546946bcdeb455f20f916a3676cfb34 - Exam 42, Tue Oct 24 10:46:51 2017 +0200 : modify
-1d204b11626bb0dca498ae8f22b4c5359c90e098 - Exam 42, Tue Oct 24 10:45:07 2017 +0200 : brackets/
+$> git -C /var/folders/h6/_p5n_6fd6rgf9s3hmnprp6600000gq/T/tmp9vL21P/user log --pretty='%H - %an, %ad : %s'
+c0b34e0019455ba347fd338c5405c4e977e32bdd - rfulop, Thu Oct 26 03:50:14 2017 +0200 : brackets
  
 = Collected files ==========================================
-$> ls -lAR /var/folders/dm/dqtn846x2wdf4h6jk_rh0mq00000gq/T/tmpZIs5QU/user
+$> ls -lAR /var/folders/h6/_p5n_6fd6rgf9s3hmnprp6600000gq/T/tmp9vL21P/user
 total 8
--rw-r--r--  1 deepthought  deepthought  484 Oct 24 10:47 __GIT_HISTORY
-drwxr-xr-x  3 deepthought  deepthought  102 Oct 24 10:47 brackets
+-rw-r--r--  1 deepthought  deepthought  255 Oct 26 03:51 __GIT_HISTORY
+drwxr-xr-x  3 deepthought  deepthought  102 Oct 26 03:51 brackets
 
-/var/folders/dm/dqtn846x2wdf4h6jk_rh0mq00000gq/T/tmpZIs5QU/user/brackets:
+/var/folders/h6/_p5n_6fd6rgf9s3hmnprp6600000gq/T/tmp9vL21P/user/brackets:
 total 8
--rw-r--r--  1 deepthought  deepthought  2186 Oct 24 10:47 brackets.c
+-rw-r--r--  1 deepthought  deepthought  2052 Oct 26 03:51 brackets.c
  
 = brackets =====================================================================
 $> clang -Wextra -Wall -Werror brackets.c -o user_exe 
 
 = Test 1 ===================================================
-$> ./uqzcu4q2ydhtnby7iw0sh4m5 '(toto)'
+$> ./yyy9fe74bacbt6bor81xzp0l '(toto)'
 $> diff -U 3 user_output_test1 test1.output | cat -e
 
 Diff OK :D
 = Test 2 ===================================================
-$> ./gtbyprt6xp0af39abirbxuz2 '([)]'
+$> ./ityhml9jfxzurldl8pwxhfy7 '([)]'
 $> diff -U 3 user_output_test2 test2.output | cat -e
 
 Diff OK :D
 = Test 3 ===================================================
-$> ./gebcqcz2zsytt6o9ydikbga0 '' '{[(0 + 0)(1 + 1)](3*(-1)){()}}'
+$> ./djwru64fkvb510pe3ruylolv '' '{[(0 + 0)(1 + 1)](3*(-1)){()}}'
 $> diff -U 3 user_output_test3 test3.output | cat -e
 
 Diff OK :D
 = Test 4 ===================================================
-$> ./u56aj3d0hswwc6mob955ti9l 
+$> ./3o38currfyqeufzaszo1cq67 
 $> diff -U 3 user_output_test4 test4.output | cat -e
 
 Diff OK :D
 = Test 5 ===================================================
-$> ./vxcvc04fp9rc6qcrflzpdf59 '()' '[]' '{}' '' 'toto' '([{}[{(()[])}()]]())(((([])))())'
+$> ./skl8vi7in2c1oxw0p3b6j4o0 '()' '[]' '{}' '' 'toto' '([{}[{(()[])}()]]())(((([])))())'
 $> diff -U 3 user_output_test5 test5.output | cat -e
 
 Diff OK :D
 = Test 6 ===================================================
-$> ./ae30lczwdlim9rjlvxgi68z3 '()[]{}' '([{}])[({})]{([])}'
+$> ./w6adwg80a95k2seuc8ezauus '()[]{}' '([{}])[({})]{([])}'
 $> diff -U 3 user_output_test6 test6.output | cat -e
 
 Diff OK :D
 = Test 7 ===================================================
-$> ./zqq3iezk0y4lf54nlww7t4sn '(]' '{)' '[}' ')' '}' ')' '(' '{' '['
+$> ./o22bjc3dwbiyho54bj7jlxeu '(]' '{)' '[}' ')' '}' ')' '(' '{' '['
 $> diff -U 3 user_output_test7 test7.output | cat -e
 
 Diff OK :D
 = Test 8 ===================================================
-$> ./utkjzehwroadfbemij3h2xgt '({)}' '[()]{}]' '])}' '([{' "(cette (trace n'a pas [de but precis]) {a part embeter (tout le monde)})"
+$> ./0m94whkqwb0wdecnnylz3epo '({)}' '[()]{}]' '])}' '([{' "(cette (trace n'a pas [de but precis]) {a part embeter (tout le monde)})"
 $> diff -U 3 user_output_test8 test8.output | cat -e
 
 Diff OK :D
